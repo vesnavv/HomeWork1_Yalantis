@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.vsevolodvesnovsky.homework1_yalantis.MainActivity">
+
+ <include android:id="@+id/mToolbar"
+     layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mToolbar"
+        android:paddingTop="@dimen/scrollView_paddingTop"
+        android:paddingBottom="@dimen/scrollView_paddingBottom"
+        android:paddingLeft="@dimen/scrollView_paddingLeft"
+        android:paddingRight="@dimen/scrollView_paddingRight"
+        android:background="@color/colorBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/NameField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/issue_department"
+                android:id="@+id/tvDepartment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorPrimaryText" />
+
+            <TextView
+                style="@style/StatusOfIssue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/issue_state"
+                android:id="@+id/tvIssueState"
+                android:layout_below="@+id/tvDepartment"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/textview_rounded_corners"
+                android:textColor="@color/colorWhite" />
+
+            <View
+                style="@style/DelimiterElement"
+                android:id="@+id/vDelimiter1"
+                android:layout_below="@+id/tvIssueState"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                style="@style/NameField"
+                android:text="@string/issue_create_title"
+                android:id="@+id/tvIssueCreated"
+                android:layout_below="@+id/vDelimiter1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                style="@style/ValueField"
+                android:text="@string/issue_create_value"
+                android:id="@+id/tvIssueCreatedValue"
+                android:layout_below="@+id/vDelimiter1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                style="@style/DelimiterElement"
+                android:id="@+id/vDelimiter2"
+                android:layout_below="@+id/tvIssueCreated"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                style="@style/NameField"
+                android:text="@string/issue_registered_title"
+                android:id="@+id/tvIssueRegistered"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/vDelimiter2"/>
+
+            <TextView
+                style="@style/ValueField"
+                android:text="@string/issue_registered_value"
+                android:id="@+id/tvIssueRegisteredValue"
+                android:layout_below="@+id/vDelimiter2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                style="@style/DelimiterElement"
+                android:id="@+id/vDelimiter3"
+                android:layout_below="@+id/tvIssueRegistered"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                style="@style/NameField"
+                android:text="@string/issue_solveUp_title"
+                android:id="@+id/tvIssueSolveUp"
+                android:layout_below="@+id/vDelimiter3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                style="@style/ValueField"
+                android:text="@string/issue_solveUp_value"
+                android:id="@+id/tvIssueSolveUpValue"
+                android:layout_below="@+id/vDelimiter3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                style="@style/DelimiterElement"
+                android:id="@+id/vDelimiter4"
+                android:layout_below="@+id/tvIssueSolveUp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                style="@style/NameField"
+                android:text="@string/issue_responsible_title"
+                android:id="@+id/tvIssueResponsible"
+                android:layout_below="@+id/vDelimiter4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                style="@style/ValueField"
+                android:text="@string/issue_responsible_value"
+                android:id="@+id/tvIssueResponsibleValue"
+                android:layout_below="@+id/vDelimiter4"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/tvIssueResponsible"
+                android:layout_toEndOf="@+id/tvIssueResponsible"
+                android:layout_above="@+id/vDelimiter5"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textAlignment="viewEnd"
+                android:gravity="end" />
+
+            <View
+                style="@style/DelimiterElement"
+                android:id="@+id/vDelimiter5"
+                android:layout_below="@+id/tvIssueResponsible"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                style="@style/TextField"
+                android:text="@string/issue_description"
+                android:id="@+id/tvIssueTextValue"
+                android:layout_below="@+id/vDelimiter5" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/recView_layout_height"
+                android:layout_below="@id/tvIssueTextValue"
+                android:id="@+id/recView">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

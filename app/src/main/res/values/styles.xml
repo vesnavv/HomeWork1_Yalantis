@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+    </style>
+
+    <style name="NameField">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:padding">@dimen/element_paddingAll</item>
+        <item name="android:layout_marginTop">@dimen/element_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/element_marginBottom</item>
+    </style>
+
+    <style name="ValueField">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:padding">@dimen/element_paddingAll</item>
+        <item name="android:layout_margin">@dimen/element_marginAll</item>
+    </style>
+
+    <style name="TextField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:padding">@dimen/element_paddingAll</item>
+        <item name="android:layout_marginTop">@dimen/element_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/element_marginBottom</item>
+    </style>
+
+    <style name="StatusOfIssue">
+        <item name="android:padding">@dimen/status_paddingAll</item>
+        <item name="android:layout_margin">@dimen/status_marginAll</item>
+    </style>
+
+    <style name="DelimiterElement">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/delimiter_height</item>
+        <item name="android:layout_margin">@dimen/delimiter_marginAll</item>
+    </style>
+
+</resources>

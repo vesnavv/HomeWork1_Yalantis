@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="issue_create_value">25 February 2016</string>
+    <string name="issue_department">Municipal services</string>
+    <string name="issue_description">Open manhole (near billboard).District turning 18 and 19 trams to avenue Mira from Donetsk highway.</string>
+    <string name="issue_registered_value">26 February 2016</string>
+    <string name="issue_responsible_title">Responsible</string>
+    <string name="issue_responsible_value">Dnipropetrovsky MVK ()</string>
+    <string name="issue_solveUp_title">Solve up to</string>
+    <string name="issue_solveUp_value">29 February 2016</string>
+    <string name="issue_registered_title">Registered</string>
+    <string name="issue_create_title">Created</string>
+    <string name="issue_state">In progress</string>
+</resources>

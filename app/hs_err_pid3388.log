@@ -1,0 +1,58 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 721536 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=3388, tid=7152
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_80-b15) (build 1.7.0_80-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.80-b11 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000087ee800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=7152, stack(0x0000000009e70000,0x0000000009f70000)]
+
+Stack: [0x0000000009e70000,0x0000000009f70000]
+
+Current CompileTask:
+C2:   2051  240             com.android.dx.ssa.SsaRenamer$BlockRenamer::process (191 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000a25a800 JavaThread "pool-1-thread-4" [_thread_in_Java, id=7028, stack(0x000000000a970000,0x000000000aa70000)]
+  0x000000000a1fc000 JavaThread "pool-1-thread-3" [_thread_in_Java, id=5384, stack(0x000000000a870000,0x000000000a970000)]
+  0x000000000885d000 JavaThread "pool-1-thread-2" [_thread_in_Java, id=688, stack(0x000000000a770000,0x000000000a870000)]
+  0x000000000a301000 JavaThread "pool-2-thread-1" [_thread_blocked, id=4072, stack(0x000000000a670000,0x000000000a770000)]
+  0x000000000a324000 JavaThread "pool-1-thread-1" [_thread_in_Java, id=1196, stack(0x000000000a570000,0x000000000a670000)]
+  0x00000000087f5000 JavaThread "Service Thread" daemon [_thread_blocked, id=6360, stack(0x0000000009f70000,0x000000000a070000)]
+=>0x00000000087ee800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=7152, stack(0x0000000009e70000,0x0000000009f70000)]
+  0x00000000087e3800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=4324, stack(0x0000000009d70000,0x0000000009e70000)]
+  0x00000000087e2800 JavaThread "Attach Listener" daemon [_thread_blocked, id=5908, stack(0x0000000009c70000,0x0000000009d70000)]
+  0x00000000087df800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5408, stack(0x0000000009b70000,0x0000000009c70000)]
+  0x00000000087ae000 JavaThread "Finalizer" daemon [_thread_blocked, id=3872, stack(0x0000000009a70000,0x0000000009b70000)]
+  0x00000000087a5000 JavaThread "Reference Handler" daemon [_thread_blocked, id=6508, stack(0x0000000009970000,0x0000000009a70000)]
+  0x0000000002910800 JavaThread "main" [_thread_in_Java, id=2176, stack(0x0000000002740000,0x0000000002840000)]
+
+Other Threads:
+  0x00000000087a1000 VMThread [stack: 0x0000000009870000,0x0000000009970000] [id=1832]
+  0x0000000008803000 WatcherThread [stack: 0x000000000a070000,0x000000000a170000] [id=1628]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: 
