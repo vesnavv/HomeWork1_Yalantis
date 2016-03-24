@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIssueResponsibleValue = (TextView) findViewById(R.id.tvIssueResponsibleValue);
         mIssueTextValue = (TextView) findViewById(R.id.tvIssueTextValue);
 
-        mToolbar= (Toolbar) findViewById(R.id.mToolbar);
+        mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         //getSupportActionBar().setTitle("СЕ-1257218"); in case if we need set title by code
@@ -85,69 +85,59 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         String myNameElement;
+        
+        myNameElement = "Not coded element";
 
         switch(view.getId()) {
             case R.id.mToolbar:
                 myNameElement = getResources().getResourceEntryName(R.id.mToolbar);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvDepartment:
                 myNameElement = getResources().getResourceEntryName(R.id.tvDepartment);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueState:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueState);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueCreated:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueCreated);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueCreatedValue:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueCreatedValue);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueRegistered:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueRegistered);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueRegisteredValue:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueRegisteredValue);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueSolveUp:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueSolveUp);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueSolveUpValue:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueSolveUpValue);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueResponsible:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueResponsible);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueResponsibleValue:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueResponsibleValue);
-                showNameInToast(myNameElement);
                 break;
 
             case R.id.tvIssueTextValue:
                 myNameElement = getResources().getResourceEntryName(R.id.tvIssueTextValue);
-                showNameInToast(myNameElement);
                 break;
-
         }
+        showNameInToast(myNameElement);
     }
 
     @Override
