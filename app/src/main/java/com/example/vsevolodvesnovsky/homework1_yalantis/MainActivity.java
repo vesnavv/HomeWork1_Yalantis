@@ -9,11 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewOnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar mToolbar;
     private ArrayList <Uri> mUriTxt;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        //getSupportActionBar().setTitle("СЕ-1257218"); in case if we need set title by code
+        //TODO getSupportActionBar().setTitle("СЕ-1257218"); in case if we need set title by code
 
         mToolbar.setOnClickListener(this);
         mDepartment.setOnClickListener(this);
@@ -59,11 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIssueTextValue.setOnClickListener(this);
 
         mUriTxt = new ArrayList<>();
-        mUriTxt.add(Uri.parse("http://reklama-city.sk/files/sides/4963bc673810acc041181408487695fb.jpg"));
-        mUriTxt.add(Uri.parse("http://kursktv.ru/sites/default/files/styles/galleryformatter_slide/public/lyuk.jpg?itok=8rhtASJb"));
+        mUriTxt.add(Uri.parse(getBaseContext().getString(R.string.url_photoExample1)));
+        mUriTxt.add(Uri.parse(getBaseContext().getString(R.string.url_photoExample2)));
 
         MyRecAdapter mAdapterPhoto;
-        mAdapterPhoto = new MyRecAdapter(mUriTxt, this, this);
+        mAdapterPhoto = new MyRecAdapter(mUriTxt, this);
 
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView = (RecyclerView) findViewById(R.id.recView);
@@ -84,65 +83,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        String myNameElement;
-        
-        myNameElement = "Not coded element";
 
-        switch(view.getId()) {
-            case R.id.mToolbar:
-                myNameElement = getResources().getResourceEntryName(R.id.mToolbar);
-                break;
+        Toast.makeText(this, view.getClass().getSimpleName(),Toast.LENGTH_SHORT).show();
 
-            case R.id.tvDepartment:
-                myNameElement = getResources().getResourceEntryName(R.id.tvDepartment);
-                break;
-
-            case R.id.tvIssueState:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueState);
-                break;
-
-            case R.id.tvIssueCreated:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueCreated);
-                break;
-
-            case R.id.tvIssueCreatedValue:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueCreatedValue);
-                break;
-
-            case R.id.tvIssueRegistered:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueRegistered);
-                break;
-
-            case R.id.tvIssueRegisteredValue:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueRegisteredValue);
-                break;
-
-            case R.id.tvIssueSolveUp:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueSolveUp);
-                break;
-
-            case R.id.tvIssueSolveUpValue:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueSolveUpValue);
-                break;
-
-            case R.id.tvIssueResponsible:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueResponsible);
-                break;
-
-            case R.id.tvIssueResponsibleValue:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueResponsibleValue);
-                break;
-
-            case R.id.tvIssueTextValue:
-                myNameElement = getResources().getResourceEntryName(R.id.tvIssueTextValue);
-                break;
-        }
-        showNameInToast(myNameElement);
     }
 
-    @Override
-    public void onImageViewClick(String imageName) {
-        Toast.makeText(this, imageName , Toast.LENGTH_LONG).show();
-    }
 }
 

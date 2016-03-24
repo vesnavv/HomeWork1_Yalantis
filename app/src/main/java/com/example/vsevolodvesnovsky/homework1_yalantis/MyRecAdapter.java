@@ -7,22 +7,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by vsevolod vesnovsky on 20.03.2016.
  */
 public class MyRecAdapter extends RecyclerView.Adapter {
 
-    private ArrayList<Uri> mImageUri;
+    private List<Uri> mImageUri;
     private Context mContext;
-    private RecyclerViewOnClickListener mListener;
 
-    public MyRecAdapter(ArrayList<Uri> mImageUri, Context mContext, RecyclerViewOnClickListener mListener) {
-        this.mImageUri = mImageUri;
-        this.mContext = mContext;
-        this.mListener = mListener;
+    public MyRecAdapter(ArrayList<Uri> imageUri, Context context) {
+        this.mImageUri = imageUri;
+        this.mContext = context;
     }
 
 
@@ -35,7 +37,7 @@ public class MyRecAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder h, final int position) {
-        ViewHolder holder = (ViewHolder)h;
+        final ViewHolder holder = (ViewHolder)h;
 
         Picasso.with(mContext).load(mImageUri.get(position))
                 .placeholder(R.drawable.ic_photo_black_48dp)
@@ -45,9 +47,7 @@ public class MyRecAdapter extends RecyclerView.Adapter {
         holder.mPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mListener != null) {
-                    mListener.onImageViewClick("ImageView " + position);
-                }
+                Toast.makeText(mContext, holder.getmPhoto().getClass().getSimpleName(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -66,6 +66,8 @@ public class MyRecAdapter extends RecyclerView.Adapter {
             mPhoto = (ImageView) itemView.findViewById(R.id.ivPhoto);
         }
 
-
+        public ImageView getmPhoto() {
+            return mPhoto;
+        }
     }
 }

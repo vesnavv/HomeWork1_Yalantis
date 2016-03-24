@@ -17,4 +17,7 @@
         Open manhole (near billboard).District turning 18 and 19 trams to avenue Mira from Donetsk highway.
     </string>
 
+    <string name="url_photoExample1" translatable="false">http://reklama-city.sk/files/sides/4963bc673810acc041181408487695fb.jpg</string>
+    <string name="url_photoExample2" translatable="false">http://kursktv.ru/sites/default/files/styles/galleryformatter_slide/public/lyuk.jpg?itok=8rhtASJb</string>
+
 </resources>
