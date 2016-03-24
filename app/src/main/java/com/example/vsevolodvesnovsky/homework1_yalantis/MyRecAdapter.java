@@ -59,9 +59,8 @@ public class MyRecAdapter extends RecyclerView.Adapter {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView mPhoto;
-        //LinearLayout linearBackground;
-
+        private ImageView mPhoto;
+        
         public ViewHolder(View itemView) {
             super(itemView);
             mPhoto = (ImageView) itemView.findViewById(R.id.ivPhoto);
