@@ -23,8 +23,8 @@ public class MyRecAdapter extends RecyclerView.Adapter {
     private Context mContext;
 
     public MyRecAdapter(ArrayList<Uri> imageUri, Context context) {
-        this.mImageUri = imageUri;
-        this.mContext = context;
+        this.mImageUri = imageUri; //[Comment] Unnecessary this
+        this.mContext = context; //[Comment] Unnecessary this
     }
 
 

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
-
+//[Comment] Images must be bigger and must be same size.
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar mToolbar;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView mRecyclerView;
     private TextView mDepartment, mIssueState, mIssueCreatedTitle, mIssueCreatedValue, mIssueRegisteredTitle;
     private TextView mIssueRegisteredValue, mIssueSolveUpTitle, mIssueSolveUpValue, mIssueResponsibleTitle;
-    private TextView mIssueResponsibleValue, mIssueTextValue;
+    private TextView mIssueResponsibleValue, mIssueTextValue; //[Comment] should be local
 
 
     @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIssueSolveUpValue = (TextView) findViewById(R.id.tvIssueSolveUpValue);
         mIssueResponsibleTitle = (TextView) findViewById(R.id.tvIssueResponsible);
         mIssueResponsibleValue = (TextView) findViewById(R.id.tvIssueResponsibleValue);
-        mIssueTextValue = (TextView) findViewById(R.id.tvIssueTextValue);
+        mIssueTextValue = (TextView) findViewById(R.id.tvIssueTextValue); //[Comment] findViewById(R.id.tvIssueTextValue).setOnClickListener(this)
 
         mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mUriTxt.add(Uri.parse(getBaseContext().getString(R.string.url_photoExample1)));
         mUriTxt.add(Uri.parse(getBaseContext().getString(R.string.url_photoExample2)));
 
-        MyRecAdapter mAdapterPhoto;
+        MyRecAdapter mAdapterPhoto; //[Comment] MyRecAdapter adapterPhoto = new MyRecAdapter(mUriTxt, this);
         mAdapterPhoto = new MyRecAdapter(mUriTxt, this);
 
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
+        //[Comment] Formatting
         Toast.makeText(this, view.getClass().getSimpleName(),Toast.LENGTH_SHORT).show();
 
     }
