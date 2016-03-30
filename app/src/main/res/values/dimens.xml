@@ -20,7 +20,7 @@
     <dimen name="status_paddingAll">5dp</dimen>
     <dimen name="status_marginAll">3dp</dimen>
 
-    <dimen name="recView_layout_height">120dp</dimen>
+    <dimen name="recView_layout_height">200dp</dimen>
 
     <dimen name="scrollView_paddingBottom">10dp</dimen>
     <dimen name="scrollView_paddingTop">10dp</dimen>

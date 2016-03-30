@@ -23,8 +23,8 @@ public class MyRecAdapter extends RecyclerView.Adapter {
     private Context mContext;
 
     public MyRecAdapter(ArrayList<Uri> imageUri, Context context) {
-        this.mImageUri = imageUri;
-        this.mContext = context;
+        mImageUri = imageUri;
+        mContext = context;
     }
 
 
@@ -37,11 +37,12 @@ public class MyRecAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder h, final int position) {
+
         final ViewHolder holder = (ViewHolder)h;
 
+        final int SIZE_HOR = 400, SIZE_VER = 400;
         Picasso.with(mContext).load(mImageUri.get(position))
-                .placeholder(R.drawable.ic_photo_black_48dp)
-                .error(R.drawable.ic_error_black_48dp)
+                .resize(SIZE_HOR, SIZE_VER)
                 .into(holder.mPhoto);
 
         holder.mPhoto.setOnClickListener(new View.OnClickListener() {

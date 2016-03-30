@@ -7,5 +7,6 @@
     android:maxWidth="@dimen/imageViewInRecView_maxWidth"
     android:layout_marginRight="@dimen/linearLayoutInRecView_paddingRight"
     android:id="@+id/ivPhoto"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    android:scaleType="centerInside">
 </ImageView>
