@@ -40,7 +40,7 @@ public class MyRecAdapter extends RecyclerView.Adapter {
 
         final ViewHolder holder = (ViewHolder)h;
 
-        final int SIZE_HOR = 400, SIZE_VER = 400;
+        private final int SIZE_HOR = 400, SIZE_VER = 400;
         Picasso.with(mContext).load(mImageUri.get(position))
                 .resize(SIZE_HOR, SIZE_VER)
                 .into(holder.mPhoto);
