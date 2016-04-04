@@ -21,6 +21,7 @@ public class MyRecAdapter extends RecyclerView.Adapter {
 
     private List<Uri> mImageUri;
     private Context mContext;
+    private static final int SIZE_HOR = 400, SIZE_VER = 400;
 
     public MyRecAdapter(ArrayList<Uri> imageUri, Context context) {
         mImageUri = imageUri;
@@ -39,12 +40,11 @@ public class MyRecAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder h, final int position) {
 
         final ViewHolder holder = (ViewHolder)h;
-
-        final int SIZE_HOR = 400, SIZE_VER = 400;
+        
         Picasso.with(mContext).load(mImageUri.get(position))
                 .resize(SIZE_HOR, SIZE_VER)
                 .into(holder.mPhoto);
-
+                
         holder.mPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
